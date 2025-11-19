@@ -1,0 +1,40 @@
+<resources>
+
+    <!-- Base app theme (now MaterialComponents) -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/cf_primary</item>
+        <item name="colorPrimaryDark">@color/cf_surface</item>
+        <item name="colorAccent">@color/cf_accent</item>
+
+        <item name="colorPrimaryVariant">@color/cf_surface</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorSecondary">@color/cf_accent</item>
+        <item name="colorOnSecondary">@android:color/white</item>
+
+        <item name="android:windowBackground">@color/cf_background_dark</item>
+        <item name="android:textColor">@color/cf_text_primary</item>
+        <item name="android:divider">@color/cf_background_dark</item>
+    </style>
+
+    <!-- Dialog animation style -->
+    <style name="DialogAnimation" parent="ThemeOverlay.MaterialComponents.Dialog">
+        <item name="android:windowEnterAnimation">@anim/fade_in_zoom</item>
+        <item name="android:windowExitAnimation">@anim/fade_out_zoom</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <!-- Custom Button -->
+    <style name="CyberButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/cf_primary</item>
+        <item name="android:textColor">@color/cf_background_dark</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Custom TextView -->
+    <style name="CyberText" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">@color/cf_text_primary</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+</resources>

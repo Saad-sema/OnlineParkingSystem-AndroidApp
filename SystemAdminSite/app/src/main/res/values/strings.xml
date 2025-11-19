@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SystemAdminSite</string>
+
+    <!-- Drawer toggle strings -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Toolbar title -->
+    <string name="title_dashboard">Dashboard</string>
+    <string name="url">https://9c712900a8a6.ngrok-free.app</string>
+</resources>

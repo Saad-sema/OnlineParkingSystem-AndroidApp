@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#1E293B">
+
+    <!-- Radio Buttons -->
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioOneHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Extend by 1 Hour"
+            android:textColor="#FFFFFF"
+            android:buttonTint="#38B2AC" />
+
+        <RadioButton
+            android:id="@+id/radioCustom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Custom Extend Time"
+            android:textColor="#FFFFFF"
+            android:buttonTint="#38B2AC" />
+    </RadioGroup>
+
+    <!-- Date/Time Picker Button -->
+    <Button
+        android:id="@+id/btnPickDateTime"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Pick Date and Time"
+        android:visibility="gone"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#4DD0E1"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <!-- Price Info -->
+    <TextView
+        android:id="@+id/textPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#E0F2F1"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:paddingTop="16dp" />
+
+    <!-- Confirm Button -->
+    <Button
+        android:id="@+id/btnExtend"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:text="Extend"
+        android:backgroundTint="#38B2AC"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+</LinearLayout>

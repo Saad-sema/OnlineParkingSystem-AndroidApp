@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:layout_margin="8dp"
+    android:background="@drawable/background_1">
+
+    <!-- Slot Id -->
+    <TextView
+        android:id="@+id/tvSlotIdLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Slot Id :"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/tvSlotId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/tvSlotIdLabel"
+        android:layout_marginStart="8dp"
+        android:text="1"
+        android:textSize="16sp"
+        android:textColor="#000" />
+
+    <!-- Slot Name -->
+    <TextView
+        android:id="@+id/tvSlotNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSlotId"
+        android:layout_marginTop="8dp"
+        android:text="Slot Name :"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/tvPaymentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/tvSlotNameLabel"
+        android:layout_alignBaseline="@id/tvSlotNameLabel"
+        android:layout_marginStart="8dp"
+        android:text="E20"
+        android:textSize="16sp"
+        android:textColor="#000" />
+
+    <!-- Slot Location -->
+    <TextView
+        android:id="@+id/tvSlotLocationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSlotNameLabel"
+        android:layout_marginTop="8dp"
+        android:text="Slot Location :"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/tvSlotLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/tvSlotLocationLabel"
+        android:layout_alignBaseline="@id/tvSlotLocationLabel"
+        android:layout_marginStart="8dp"
+        android:text="Block A"
+        android:textSize="16sp"
+        android:textColor="#000" />
+
+    <!-- Rate -->
+    <TextView
+        android:id="@+id/tvRateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSlotLocationLabel"
+        android:layout_marginTop="8dp"
+        android:text="Rate :"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/tvRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/tvRateLabel"
+        android:layout_alignBaseline="@id/tvRateLabel"
+        android:layout_marginStart="8dp"
+        android:text="20"
+        android:textSize="16sp"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/tvExtraRateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvRateLabel"
+        android:layout_marginTop="8dp"
+        android:text="ExtraCharges :"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvExtraRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/tvExtraRateLabel"
+        android:layout_alignBaseline="@id/tvExtraRateLabel"
+        android:layout_marginStart="8dp"
+        android:text="20"
+        android:textSize="16sp"
+        android:textColor="#000" />
+
+
+    <!-- Remove Button -->
+    <Button
+        android:id="@+id/btnRemove"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:text="Remove"
+        android:textColor="#fff"
+        android:backgroundTint="#E53935"
+        android:layout_marginEnd="8dp" />
+
+</RelativeLayout>

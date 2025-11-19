@@ -1,0 +1,173 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:layout_margin="8dp"
+    android:background="@drawable/background_1">
+
+    <!-- Slot Id -->
+    <TextView
+        android:id="@+id/tvUserIdLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Id :"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/tvUserId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/tvUserIdLabel"
+        android:layout_marginStart="8dp"
+        android:text="1"
+        android:textSize="16sp"
+        android:textColor="#000" />
+
+    <!-- Slot Name -->
+    <TextView
+        android:id="@+id/tvUserNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvUserIdLabel"
+        android:layout_marginTop="8dp"
+        android:text="User Name :"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/tvUserId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/tvUserNameLabel"
+        android:layout_alignBaseline="@id/tvUserNameLabel"
+        android:layout_marginStart="8dp"
+        android:text="E20"
+        android:textSize="16sp"
+        android:textColor="#000" />
+
+
+    <TextView
+        android:id="@+id/tvUserEmailLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvUserNameLabel"
+        android:layout_marginTop="8dp"
+        android:text="Email :"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/tvUserEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/tvUserEmailLabel"
+        android:layout_alignBaseline="@id/tvUserEmailLabel"
+        android:layout_marginStart="8dp"
+        android:text="Block A"
+        android:textSize="16sp"
+        android:textColor="#000" />
+    <TextView
+        android:id="@+id/tvPasswordLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvUserEmailLabel"
+        android:layout_marginTop="8dp"
+        android:text="Password :"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/tvPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/tvPasswordLabel"
+        android:layout_alignBaseline="@id/tvPasswordLabel"
+        android:layout_marginStart="8dp"
+        android:text="20"
+        android:textSize="16sp"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/tvPhoneNoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvPasswordLabel"
+        android:layout_marginTop="8dp"
+        android:text="Phone No :"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/tvAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/tvPhoneNoLabel"
+        android:layout_alignBaseline="@id/tvPhoneNoLabel"
+        android:layout_marginStart="8dp"
+        android:text="20"
+        android:textSize="16sp"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/tvStatusLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvPhoneNoLabel"
+        android:layout_marginTop="8dp"
+        android:text="Status :"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/tvStatusLabel"
+        android:layout_alignBaseline="@id/tvStatusLabel"
+        android:layout_marginStart="8dp"
+        android:text="20"
+        android:textSize="16sp"
+        android:textColor="#000" />
+    <TextView
+        android:id="@+id/tvRegistrationDateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvStatusLabel"
+        android:layout_marginTop="8dp"
+        android:text="RegistrationDate :"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvRegistrationDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/tvRegistrationDateLabel"
+        android:layout_alignBaseline="@id/tvRegistrationDateLabel"
+        android:layout_marginStart="8dp"
+        android:text="20/12/2025"
+        android:textSize="16sp"
+        android:textColor="#000" />
+
+
+    <!-- Remove Button -->
+    <Button
+        android:id="@+id/btnRemove"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:text="Block"
+        android:textColor="#fff"
+        android:backgroundTint="#E53935"
+        android:layout_marginEnd="8dp" />
+
+</RelativeLayout>

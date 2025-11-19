@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121620">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_book_now"
+        android:clipToPadding="false"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="160dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:textAlignment="center">
+
+            <!-- User Name Label -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="User Name"
+                android:textColor="#A0A8B5"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- User Name Input -->
+            <EditText
+                android:id="@+id/et_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rounded_edittext_dark"
+                android:hint="Enter your name"
+
+                android:inputType="textPersonName"
+                android:padding="14dp"
+                android:textColor="#ECEFF4"
+                android:textSize="16sp" />
+
+            <!-- Phone Number Label -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone Number"
+                android:textColor="#A0A8B5"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Phone Input -->
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rounded_edittext_dark"
+                android:hint="Enter phone number"
+
+                android:inputType="phone"
+                android:maxLength="10"
+                android:padding="14dp"
+                android:textColor="#ECEFF4"
+                android:textSize="16sp" />
+
+            <!-- Vehicle Number Label -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vehicle Number"
+                android:textColor="#A0A8B5"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Vehicle Input -->
+            <EditText
+                android:id="@+id/et_vehicle"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rounded_edittext_dark"
+                android:hint="Enter vehicle number"
+
+                android:inputType="text"
+                android:padding="14dp"
+                android:textColor="#ECEFF4"
+                android:textSize="16sp" />
+
+            <!-- Entry Date & Time Label -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Entry Date and Time"
+                android:textColor="#A0A8B5"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Entry Date & Time Input -->
+            <EditText
+                android:id="@+id/et_entry_datetime"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rounded_edittext_dark"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:hint="Select entry date and time"
+
+                android:inputType="none"
+                android:padding="14dp"
+                android:textColor="#ECEFF4"
+                android:textSize="16sp" />
+
+            <!-- Duration Label -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Duration"
+                android:textColor="#A0A8B5"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Duration RadioGroup -->
+            <RadioGroup
+                android:id="@+id/rg_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb_one_hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#81A1C1"
+                    android:padding="10dp"
+                    android:text="1 Hour"
+                    android:textColor="#D8DEE9"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_two_hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#81A1C1"
+                    android:padding="10dp"
+                    android:text="2 Hour"
+                    android:textColor="#D8DEE9"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_three_hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#81A1C1"
+                    android:padding="10dp"
+                    android:text="3 Hour"
+                    android:textColor="#D8DEE9"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_long"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#81A1C1"
+                    android:padding="10dp"
+                    android:text="Long Booking"
+                    android:textColor="#D8DEE9"
+                    android:textSize="16sp" />
+            </RadioGroup>
+
+            <!-- Exit Date/Time Container -->
+            <LinearLayout
+                android:id="@+id/long_booking_exit_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:text="Exit Date and Time"
+                    android:textColor="#A0A8B5"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_exit_datetime"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/rounded_edittext_dark"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:hint="Select exit date and time"
+                    android:inputType="none"
+                    android:padding="14dp"
+                    android:textColor="#ECEFF4"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Total Charges -->
+            <TextView
+                android:id="@+id/tv_total_charges"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="0dp"
+                android:gravity="end"
+                android:text="Total Charges: ₹0"
+                android:textColor="#88C0D0"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Fixed Book Now Button -->
+    <Button
+        android:id="@+id/btn_book_now"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:backgroundTint="#81A1C1"
+        android:elevation="10dp"
+        android:text="Book Now"
+        android:textAlignment="center"
+        android:textColor="#0D1D38"
+        android:textDirection="firstStrongLtr"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base App Theme -->
+        <!-- Point to AppTheme defined in styles.xml -->
+        <style name="Theme.SytemOnPark" parent="AppTheme" />
+</resources>

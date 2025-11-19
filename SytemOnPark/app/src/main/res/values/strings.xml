@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ParkXpert</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="booking_history">Booking History</string>
+    <string name="about_us">About Us</string>
+    <string name="change_password">Change Password</string>
+    <string name="url">https://9c712900a8a6.ngrok-free.app</string>
+
+    <!-- http://10.0.2.2-->
+    <!-- Add any other strings you need -->
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="btnDoneAdd" type="id" />
+    <item name="btnCancelAdd" type="id" />
+    <item name="etExtraCharges" type="id" />
+    <item name="etRate" type="id" />
+    <item name="etSlotLocation" type="id" />
+    <item name="etSlotName" type="id" />
+    <item name="tvTitleAdd" type="id" />
+</resources>

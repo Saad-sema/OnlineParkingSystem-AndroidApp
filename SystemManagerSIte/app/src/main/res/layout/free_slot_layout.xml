@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/button_border"
+    android:elevation="8dp"
+    android:orientation="horizontal"
+    android:padding="12dp"
+
+    android:shadowColor="#27EBBE"
+    android:shadowDx="3"
+    android:shadowDy="3"
+    android:shadowRadius="4">
+
+    <!-- Slot image -->
+
+    <ImageView
+        android:id="@+id/img_slot"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/button_border"
+        android:contentDescription="Parking Slot Image"
+        android:scaleType="centerInside"
+        android:shadowColor="#27EBBE"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="4"
+        android:src="@drawable/images" />
+
+    <TextView
+        android:id="@+id/tv_slot_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_weight="1"
+        android:text="E20"
+        android:textColor="#222"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnThis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#78C740"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="Available"
+        android:textColor="#F9FFF8"
+        android:textSize="16sp" />
+
+    <!-- Slot name -->
+
+    <!-- Book Now button -->
+</LinearLayout>

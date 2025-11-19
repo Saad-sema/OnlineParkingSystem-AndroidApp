@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp"
+    android:background="@drawable/dialog_bg_dark">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tv_payment_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PAYMENT DONE"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#81C784"
+    android:gravity="center"
+    android:layout_marginBottom="15dp" />
+
+    <!-- OTP Label -->
+    <TextView
+        android:id="@+id/tv_otp_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your OTP is:"
+        android:textSize="18sp"
+        android:textColor="#E0E6ED" ></TextView>
+
+    <!-- OTP Value -->
+    <TextView
+        android:id="@+id/tv_otp_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="123456"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:padding="12dp"
+        android:textColor="#FF6AC1"/>
+    <!-- Done Button -->
+    <Button
+        android:id="@+id/btn_done"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:backgroundTint="#5A67D8"
+    android:text="Done"
+    android:textColor="#FFFFFF"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    android:layout_marginTop="20dp"
+    android:elevation="4dp" />
+</LinearLayout>

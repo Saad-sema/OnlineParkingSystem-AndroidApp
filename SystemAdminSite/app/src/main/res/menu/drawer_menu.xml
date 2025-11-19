@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_dashboard" android:title="Dashboard" android:icon="@drawable/ic_dashboard"/>
+    <item android:id="@+id/nav_user" android:title="User Manage" android:icon="@drawable/ic_user"/>
+    <item android:id="@+id/nav_slot" android:title="Slot Manage" android:icon="@drawable/ic_slot"/>
+    <item android:id="@+id/nav_booking" android:title="Booking Manage" android:icon="@drawable/ic_booking"/>
+    <item android:id="@+id/nav_payment" android:title="Payment Manage" android:icon="@drawable/ic_payment"/>
+    <item android:id="@+id/nav_history" android:title="History Manage" android:icon="@drawable/ic_history"/>
+</menu>
