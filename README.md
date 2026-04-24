@@ -2,7 +2,8 @@
 
 [![Android](https://img.shields.io/badge/Platform-Android-green?logo=android)](https://developer.android.com)
 [![Java](https://img.shields.io/badge/Language-Java-orange?logo=java)](https://www.java.com)
-[![Firebase](https://img.shields.io/badge/Backend-Firebase-yellow?logo=firebase)](https://firebase.google.com)
+[![PHP](https://img.shields.io/badge/Backend-PHP-777BB4?logo=php)](https://www.php.net)
+[![MySQL](https://img.shields.io/badge/Database-MySQL-4479A1?logo=mysql)](https://www.mysql.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 A smart, user-friendly **Online Parking System** Android application that allows users to search, book, and manage parking slots in real time. Designed to reduce parking hassle in malls, colleges, airports, and urban areas.
@@ -22,7 +23,7 @@ A smart, user-friendly **Online Parking System** Android application that allows
 ## ✨ Features
 
 ### 👤 User
-- Register & Login (Email / Google Sign-In)
+- Register & Login (Email & Password)
 - Search available parking slots by location
 - View parking slot details (location, price, availability)
 - Book a parking slot in real time
@@ -43,12 +44,11 @@ A smart, user-friendly **Online Parking System** Android application that allows
 
 | Layer        | Technology                     |
 |--------------|-------------------------------|
-| Language     | Java / Kotlin                 |
+| Language     | Java                          |
 | IDE          | Android Studio                |
-| Backend      | Firebase (Firestore / Realtime DB) |
-| Auth         | Firebase Authentication       |
-| Notifications| Firebase Cloud Messaging (FCM)|
-
+| Backend      | PHP (REST APIs)               |
+| Database     | MySQL                         |
+| Networking   | Volley / Retrofit             |
 | UI           | XML Layouts, Material Design  |
 | Build Tool   | Gradle                        |
 
@@ -74,7 +74,18 @@ olineparkingsystem-androidapp/
 │   │   │   │   └── values/             # Colors, strings, styles
 │   │   │   └── AndroidManifest.xml
 │   └── build.gradle
-├── google-services.json                # Firebase config (not committed)
+│
+├── server/                             # PHP Backend
+│   ├── config/
+│   │   └── db_connect.php              # MySQL DB connection
+│   ├── api/
+│   │   ├── login.php
+│   │   ├── register.php
+│   │   ├── get_slots.php
+│   │   ├── book_slot.php
+│   │   └── cancel_booking.php
+│   └── parking_db.sql                  # MySQL database schema
+│
 └── README.md
 ```
 
@@ -86,8 +97,7 @@ olineparkingsystem-androidapp/
 
 - Android Studio **Hedgehog** or later
 - Android SDK **API 21+** (Android 5.0 Lollipop and above)
-- A Firebase project set up at [console.firebase.google.com](https://console.firebase.google.com)
-- Google Maps API Key
+- A local or hosted server with **PHP** and **MySQL** (e.g., XAMPP / WAMP / cPanel)
 
 ### Installation
 
@@ -100,12 +110,27 @@ olineparkingsystem-androidapp/
 2. **Open in Android Studio**
    - Launch Android Studio → `File` → `Open` → select the project folder
 
-3. **Configure Firebase**
-   - Create a Firebase project and add an Android app
-   - Download `google-services.json` and place it in the `/app` directory
-   - Enable **Authentication**, **Firestore / Realtime Database**, and **Cloud Messaging**
+3. **Setup the PHP Backend**
+   - Copy the `server/` folder to your web server root (e.g., `htdocs/` for XAMPP)
+   - Import the database:
+     ```bash
+     mysql -u root -p < server/parking_db.sql
+     ```
+   - Update DB credentials in `server/config/db_connect.php`:
+     ```php
+     $host = "localhost";
+     $user = "root";
+     $password = "";
+     $database = "parking_db";
+     ```
 
-4. **Build & Run**
+4. **Update API Base URL in Android App**
+   - In `utils/Constants.java` (or wherever your base URL is defined), set:
+     ```java
+     public static final String BASE_URL = "http://YOUR_SERVER_IP/server/api/";
+     ```
+
+5. **Build & Run**
    - Connect a device or start an emulator
    - Click **Run ▶** or use:
      ```bash
@@ -114,33 +139,41 @@ olineparkingsystem-androidapp/
 
 ---
 
-## 🔑 Firebase Configuration
+## 🗄️ Database Structure (MySQL)
 
-Ensure the following Firebase services are enabled:
+```sql
+-- Users Table
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
+    password VARCHAR(255),
+    phone VARCHAR(15),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
-| Service                     | Purpose                          |
-|-----------------------------|----------------------------------|
-| Firebase Authentication     | User login & registration        |
-| Cloud Firestore / Realtime DB | Parking slot & booking data   |
-| Firebase Storage            | Profile pictures (optional)      |
-| Firebase Cloud Messaging    | Push notifications for bookings  |
+-- Parking Slots Table
+CREATE TABLE parking_slots (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    slot_number VARCHAR(10),
+    location VARCHAR(150),
+    is_available TINYINT(1) DEFAULT 1,
+    price_per_hour DECIMAL(10,2),
+    vehicle_type VARCHAR(50)
+);
 
----
-
-## 📊 Database Structure (Firestore Example)
-
-```
-/users/{userId}
-    - name, email, phone, profilePicUrl
-
-/parkingLocations/{locationId}
-    - name, address, latitude, longitude, totalSlots, pricePerHour
-
-/parkingSlots/{slotId}
-    - locationId, slotNumber, isAvailable, vehicleType
-
-/bookings/{bookingId}
-    - userId, slotId, locationId, startTime, endTime, status, totalAmount
+-- Bookings Table
+CREATE TABLE bookings (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    slot_id INT,
+    start_time DATETIME,
+    end_time DATETIME,
+    total_amount DECIMAL(10,2),
+    status VARCHAR(20) DEFAULT 'active',
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (slot_id) REFERENCES parking_slots(id)
+);
 ```
 
 ---
@@ -184,7 +217,8 @@ GitHub: [@saad-seema](https://github.com/saad-seema)
 
 ## 🙏 Acknowledgements
 
-- [Firebase Documentation](https://firebase.google.com/docs)
+- [PHP Documentation](https://www.php.net/docs.php)
+- [MySQL Documentation](https://dev.mysql.com/doc/)
 - [Android Developers](https://developer.android.com)
 - [Material Design Guidelines](https://material.io/design)
 
