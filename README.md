@@ -11,7 +11,7 @@ A smart, user-friendly **Online Parking System** Android application that allows
 
 ## 📱 Screenshots
 
-
+> _Add your app screenshots here_
 
 | Home Screen | Search Parking | Booking Confirmation |
 |-------------|---------------|----------------------|
@@ -48,7 +48,7 @@ A smart, user-friendly **Online Parking System** Android application that allows
 | Backend      | Firebase (Firestore / Realtime DB) |
 | Auth         | Firebase Authentication       |
 | Notifications| Firebase Cloud Messaging (FCM)|
-| Maps         | Google Maps API               |
+
 | UI           | XML Layouts, Material Design  |
 | Build Tool   | Gradle                        |
 
@@ -105,15 +105,7 @@ olineparkingsystem-androidapp/
    - Download `google-services.json` and place it in the `/app` directory
    - Enable **Authentication**, **Firestore / Realtime Database**, and **Cloud Messaging**
 
-4. **Add Google Maps API Key**
-   - In `AndroidManifest.xml`, add:
-     ```xml
-     <meta-data
-         android:name="com.google.android.geo.API_KEY"
-         android:value="YOUR_GOOGLE_MAPS_API_KEY"/>
-     ```
-
-5. **Build & Run**
+4. **Build & Run**
    - Connect a device or start an emulator
    - Click **Run ▶** or use:
      ```bash
@@ -193,11 +185,9 @@ GitHub: [@saad-seema](https://github.com/saad-seema)
 ## 🙏 Acknowledgements
 
 - [Firebase Documentation](https://firebase.google.com/docs)
-- [Google Maps Platform](https://developers.google.com/maps)
 - [Android Developers](https://developer.android.com)
 - [Material Design Guidelines](https://material.io/design)
 
 ---
 
 > ⭐ If you found this project helpful, please give it a star!
-
