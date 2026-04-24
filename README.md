@@ -11,7 +11,7 @@ A smart, user-friendly **Online Parking System** Android application that allows
 
 ## 📱 Screenshots
 
-> _Add your app screenshots here_
+
 
 | Home Screen | Search Parking | Booking Confirmation |
 |-------------|---------------|----------------------|
